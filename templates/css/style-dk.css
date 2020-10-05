@@ -1,0 +1,521 @@
+/*-------------------------------------------------------------------------------------*/
+/*GLOBALES-----*/
+/*-------------------------------------------------------------------------------------*/
+/*Alertas*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f8f9fa;
+}
+
+.conpes {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.table td {
+    border-color: #29b5fb;
+ 
+}
+.table th {
+    border-color: #29b5fb;
+    background-color: #0075b0;
+    color: #fff;
+    vertical-align:middle!important;
+    text-align:center!important;
+}
+.display_none {
+    display: none !important;
+}
+.lactive {
+    text-decoration: underline;
+}
+
+.pestanha_active {
+    margin-left: 3px;
+
+    border: 1px solid #196b95 !important;
+    padding: 15px 10px 3px 10px;
+    border-top-right-radius: 10px;
+    background: #196b95 !important;
+    color: #fff !important;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 1px 1px 7px #d7f5f3;
+}
+.pestanha {
+    margin-left: 3px;
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    padding: 15px 10px 3px 10px;
+    border-top-right-radius: 10px;
+    background: #f8f9fa;
+    color: #29b5fb;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.tooltiptext {
+    display: none;
+    width: 230px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltiptext2 {
+    display: none;
+    width: 500px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.panel_divs
+{
+    
+    height:200px;
+    font-size:14px;
+    color:#000;
+    background-color:#FFF;
+   border: 1px solid #CCC;
+   margin-bottom:50px;
+   text-align:center;
+   
+}
+#aguja{
+    position:absolute;
+    margin-left:-265px;
+    margin-top:80px;
+    
+}
+
+.heigthdivs {
+    height: 40px;
+}
+.notificacionesdiv {
+    width: 98%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+#notific {
+    position: absolute;
+    background: red;
+    padding: 1px 4px;
+    margin-left: 17px;
+    margin-top: -35px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    display: none;
+}
+.busqueda {
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background: #f8f9fa;
+
+    cursor: pointer;
+}
+.busqueda i {
+    font-size: 15px;
+    color: #29b5fb;
+}
+#message {
+    padding:20px;
+    box-sizing:border-box;
+    text-align:center;
+    z-index: 1100;
+    position: fixed;
+    bottom: -80px;
+    right: 20px;
+    width: 550px;
+    height: 120px;
+    font-size:18px;
+    border-radius: 5px;
+    background-color: #196b95;
+    color: #fff;
+    animation: up 0.6s;
+    animation-fill-mode: forwards;
+}
+
+#diveva {
+    padding: 10px 15px;
+    overflow-x: auto;
+}
+#divsub {
+    padding: 10px 15px;
+    overflow-x: auto;
+}
+#divsub2 {
+    padding: 10px 15px;
+    overflow-x: auto;
+}
+#divcor {
+    padding: 0 15px 0 15px;
+    overflow-x: auto;
+}
+.thumbtack {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg);
+    position: absolute;
+    top: 85px;
+    right: -4px;
+}
+.thumbtack2 {
+    transition: all 0.5s ease;
+    -ms-transform: rotate(0deg); /* IE 9 */
+    transform: rotate(0deg);
+}
+.icon_sesion {
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.icon_sesion3 {
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 20px;
+    color: red;
+}
+.icon_evalua22{
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom:10px;
+    font-size: 15px;
+}
+
+.icon_sesion2 {
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 20px;
+    color: #196b95;
+}
+.icon_evalua {
+    cursor: pointer;
+    font-size: 25px;
+    color: #196b95;
+}
+.icon_acor {
+    cursor: pointer;
+    right: 30px;
+    font-size: 25px;
+    color: #ccc;
+    position: absolute;
+    float: right;
+}
+.encabezadospro {
+    background: #f8f9fa;
+    text-align: left !important;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #0075b0;
+    padding: 10px 0px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center !important;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.encabezadoseva {
+    background: #f8f9fa;
+    text-align: left !important;
+    cursor: pointer;
+    padding: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    color: #0075b0;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 0px;
+    text-align: center !important;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+h6 {
+    font-size: 17px;
+    font-weight: bold;
+}
+.icon_up {
+    cursor: pointer;
+    right: 15px;
+    font-size: 25px;
+    color: #cdeef8;
+    position: fixed;
+    float: right;
+    transition: all 0.5s ease;
+    bottom: 15px;
+    z-index: 5000;
+}
+.icon_up:hover {
+    -ms-transform: scale(2, 2); /* IE 9 */
+    transform: scale(2, 2);
+    color: #0075b0;
+}
+
+@keyframes up {
+    from {
+        bottom: -80px;
+    }
+    to {
+        bottom: 8px;
+    }
+}
+#message div[class="col-10"] {
+    padding: 5px;
+    text-align: center;
+}
+#message button {
+    display:none;
+}
+/*-------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------*/
+/*LOGIN COMPONETS-----*/
+/*-------------------------------------------------------------------------------------*/
+/*Contenedor del Login*/
+.cont-login {
+    position: relative;
+    width: 26%;
+    height: auto;
+    padding: 4px;
+    top: 120px;
+    margin: 0 auto;
+    z-index: 99;
+    background-color: #f9f9f9c7;
+    border-radius: 10px;
+    border: 1px solid #efefef;
+}
+.cont-login img,
+h5 {
+    padding: 10px;
+    margin: 0 0;
+}
+.cont-login h5 {
+    color: #666;
+}
+/*Formulario login*/
+.f-log {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+}
+/*Inputs formulario*/
+.inp-log {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 8px;
+    border: none;
+    padding: 8px;
+    border-bottom: 2px solid #00aff3;
+    opacity: 0.8;
+}
+/*Textos de los inputs*/
+.tx-inp {
+    text-align: left;
+    margin: 0 0;
+    font-size: 20px;
+    color: #666;
+    font-weight: 800;
+}
+/*Boton del login*/
+.btn-log {
+    width: 80px;
+    height: 80px;
+    border-radius: 30%;
+    border: 1px solid #00aff3;
+    background: none;
+    color: #17a1d6;
+    font-weight: 800;
+    transition: border-radius 0.3s, background 0.4s;
+}
+.btn-log:hover {
+    border-radius: 50%;
+    background: #00aff3;
+    color: #fff;
+    opacity: 0.5;
+}
+/*Footer*/
+.footer-log {
+    color: #666;
+}
+/*-------------------------------------------------------------------------------------
+
+/*-------------------------------------------------------------------------------------*/
+/*USERS COMPONETS-----*/
+/*-------------------------------------------------------------------------------------*/
+.nav-users-data {
+   
+    color: #ccc;
+   
+}
+
+.sidenav {
+    z-index: 20000;
+    position: fixed;
+    /*border: 1px solid red;*/
+    height: 100vh;
+    width: 200px;
+   background:#f8f9fa;
+   border-right: 1px solid #e0e0e0;
+    transition: margin-left 0.5s ease;
+    /*box-shadow: 1px 1px 4px #E0E0E0;*/
+}
+
+.sidenav2 {
+    margin-left: -195px;
+    transition: all 0.5s ease;
+    background:#f8f9fa;
+    border-right: 1px solid #e0e0e0;
+    /*box-shadow: 1px 1px 4px #E0E0E0;*/
+}
+
+.sidenav2:hover {
+    margin-left: 0;
+   
+    /*box-shadow: 1px 1px 4px #E0E0E0;*/
+}
+/*Cabezal sidenav*/
+.head-nav {
+    border-bottom: 1px solid #e0e0e0;
+}
+/*Usuario sidenav*/
+.user-nav {
+    color: #666;
+    padding: 10px;
+}
+/*Botonera sidenav*/
+.btns-nav {
+    padding: 5px;
+}
+#mtitle {
+    background: #0075b0;
+    color: #fff;
+}
+table td {
+    text-align: left;
+}
+/*Botones sidenav*/
+
+.btn-nav {
+    display: block;
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 5px;
+   
+    color: #0075b0;
+    border: 0px solid #29b5fb;
+    background:#f8f9fa;
+}
+.btn-nav:hover {
+    background: #f8f9fa;
+    color: #0075b0;
+}
+.btn-nav-active {
+    background-color: #0075b0;
+    color: #f8f9fa;
+}
+/*Botones de usuario config*/
+.btn-user-nav {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #00aef1;
+    background: none;
+    color: #666;
+    transition: border 0.3s;
+}
+.btn-user-nav:hover {
+    color: #00aef1;
+    border: 6px solid #00aef1;
+}
+/*Panel o dash*/
+.panel {
+    position: relative;
+    height: auto;
+    z-index: 1;
+    /*border: 1px solid red;*/
+    margin-left: 200px;
+    background-color: #f8f9fa;
+    
+    transition: margin-left 0.5s ease;
+}
+.panel2 {
+    /*border: 1px solid red;*/
+    margin-left: 0px;
+    transition: all 0.5s ease;
+}
+/*-------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------*/
+/*FUNCIONES DE NODO-----*/
+/*-------------------------------------------------------------------------------------*/
+/*Navegacion de las Fuciones de nodo*/
+/*Titulo del Nodo*/
+.tit-nodo {
+    color: #196b95;
+    position: absolute;
+    left: 45%;
+    top: 5px;
+}
+/*Navegacion del Nodo*/
+.nav-functions {
+    padding: 5px;
+    background:#f8f9fa;
+    width: 100%;
+}
+#conv{
+    display:none;
+}
+/*Iconos Botones*/
+.incons-function {
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50%;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 1.5;
+    border: 1px solid #29b5fb;
+}
+/*Botones de navegacion nodo*/
+.btn-functions {
+    height:40px;
+    padding: 4px 15px;
+    margin: 5px;
+    background: #f8f9fa;
+    border: none;
+    color: #0075B0;
+    font-size: 16px;
+  
+   
+}
+
+.btn-functions-active {
+    background: #0075b0;
+    color: #f8f9fa;
+}
+/*-------------------------------------------------------------------------------------*/

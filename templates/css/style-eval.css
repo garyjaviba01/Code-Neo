@@ -1,0 +1,70 @@
+/*-------------------------------------------------------------------*/
+/*evaluador-----*/
+/*-------------------------------------------------------------------*/
+	/*Inputs de formularios*/
+	.inps-forms{
+		border: 1px solid #00aef1;
+		cursor: pointer;
+	}
+	/*Inputs para no validar*/
+	.inps-forms-no{
+		border: 1px solid #9BC7D9;
+		cursor: pointer;	
+	}
+	.inps-sel-cus{
+		border: 1px solid #00aef1;
+		cursor: pointer;
+	}
+/*-------------------------------------------------------------------*/
+/*NODER DASH / TABLERO GENERAL-----*/
+/*-------------------------------------------------------------------*/
+	/*Contenedor Del DASHBOARD*/
+	#cont-dashboard{
+		height: auto;
+		margin-top: 10px;
+		padding: 5px;		
+	}
+/*-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/
+/*NODER evaluador / NODO DE CONVOCATORIAS-----*/
+/*-------------------------------------------------------------------*/
+	/*Contenedor tab*/
+	.nd-conv{
+		padding: 5px;
+	}
+	/*Contenedor de funciones de convocatoria*/
+	.cont-convo-fun{
+		margin-top: 10px;
+		background-color: #F9FBFC;
+		padding: 10px;
+		color: #666;
+	}
+	/*Formulario de Crear convocatorioas*/
+	.form-convo{
+		padding: 10px;
+	}
+	.form-convo label{
+		font-size: 20px;
+		color: #666;
+		font-weight: 600;
+	}
+
+	/*Contenedor Tab */
+	.nd-pers{
+		padding: 5px;
+	}
+	/*Contenedor Funciones*/
+	#cont-pers-fun{
+		margin-top: 10px;
+		background-color: #F9FBFC;
+		padding: 10px;
+		color: #666;
+	}
+	/*Contenedor Formulario Agregar*/
+	#form-pers-add{
+		padding: 10px;
+	}
+	
+	
+/*-------------------------------------------------------------------*/

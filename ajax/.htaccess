@@ -1,0 +1,7 @@
+#Htacces de la pagina
+
+options All -Indexes
+
+RewriteEngine on
+
+RewriteRule ^(\w+)$ index.php?action=$1

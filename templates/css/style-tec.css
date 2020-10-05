@@ -1,0 +1,182 @@
+/*-------------------------------------------------------------------*/
+/*GLOBALES-----*/
+/*-------------------------------------------------------------------*/
+	/*Inputs de formularios*/
+	.inps-forms{
+		border: 1px solid #00aef1;
+		cursor: pointer;
+	}
+	/*Inputs para no validar*/
+	.inps-forms-no{
+		border: 1px solid #9BC7D9;
+		cursor: pointer;	
+	}
+	.inps-sel-cus{
+		border: 1px solid #00aef1;
+		cursor: pointer;
+	}
+/*-------------------------------------------------------------------*/
+/*NODER DASH / TABLERO GENERAL-----*/
+/*-------------------------------------------------------------------*/
+	/*Contenedor Del DASHBOARD*/
+	#dashboard{
+		height: auto;
+		margin-top: 10px;
+		padding: 5px;		
+	}
+	/*Tarjeta*/
+	.card-dash{
+		height: auto;
+		padding: 10px;
+		border: 1px solid #E0E0E0;
+		
+		border-radius: 5px;
+	}
+	/*Cabezal tarjeta*/
+	.hd-card{
+		
+		text-align: center;
+		color: #666;
+		
+	}
+	/*Cuerpo tarjeta*/
+	.bd-card{
+		padding: 15px;
+		background:#fff;
+		height: 150px;
+		text-align: center;
+		color: #666;
+	}
+/*-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/
+/*NODER TEC / NODO DE CONVOCATORIAS-----*/
+/*-------------------------------------------------------------------*/
+	/*Contenedor tab*/
+	.nd-conv{
+		padding: 5px;
+	}
+	/*Contenedor de funciones de convocatoria*/
+	.cont-convo-fun{
+		
+		
+		padding: 10px 10px;
+		color: #666;
+		margin-top: -15px;
+	}
+	/*CREAR CONVOCATORIAS-------------------*/
+	/*Formulario de Crear convocatorioas*/
+	
+	
+	/*LISTAR CONVOCATORIAS-------------------*/
+	/*Contenedor*/
+	#cont-list-convos{
+			
+	}
+/*---------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/
+/*NODER TEC / NODO DE PERSONAL-----*/
+/*-------------------------------------------------------------------*/
+	/*Contenedor Tab */
+	.nd-pers{
+		padding: 5px;
+	}
+	/*Contenedor Funciones*/
+	#cont-pers-fun{
+		
+		
+		padding: 20px 10px;
+		color: #666;
+	}
+	
+	#cont-list-users{
+		padding: 5px;
+	}
+	/*Cajas de radios*/
+	.box-radios{
+		border: 4px solid #fff;
+		padding: 10px;
+		border-radius: 10px;
+	}
+	/*Radios Criterios Clase*/
+	#radio-clase-crit{
+		display: none;
+	}
+	/*Radios Criterios Tipo*/
+	#radio-tipo-crit{
+		display: none;
+	}
+	/*Radio Criterios Categorias*/
+	#radio-cate-crit{
+		display: none;
+	}
+	/*Contenedor Configuracion criterios*/
+	#config-crits{
+		display: none;
+		border: 4px solid #fff;
+		padding: 10px;
+		border-radius: 10px;
+	}
+	/*Configuracion Cuantitativa*/
+	#crits-cuanti{
+
+	}
+	/*Configuracion Cualitativa	*/
+	#crits-cuali{
+
+	}
+	/*Text inputs cuanti*/
+	.text-cuanti{
+		border: 1px solid #0075B0;
+		background-color: #0075B0;
+		color: #fff;
+	}
+	/*Contenedor Criterios Generados*/
+	#generate-crits{
+		display: none;
+		padding: 10px;
+		margin-top: 5px;
+	}
+	/*Boton reinicio readios*/
+	.restart-crits{
+
+	}
+	/*Criterio Cuantitativo*/
+	.crit-cuanti{
+		margin: 0 auto;
+		width: 90%;
+		border: 4px solid #fff;
+		padding: 10px;
+		color: #666;
+		border-radius: 10px;
+	}
+	/*Inputs de Criterios cuanti*/
+	.inps-forms-cuanti{
+		border: 1px solid #00aef1;
+		cursor: pointer;
+	}
+	#subcrit-cuanti{
+		width: 75%;
+		margin: 0 auto;
+		padding: 10px;
+	}
+	.crit-cuali{
+		margin: 0 auto;
+		width: 90%;
+		border: 4px solid #fff;
+		padding: 10px;
+		color: #666;
+		border-radius: 10px;
+	}
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/
+/*NODER TEC / DERECHOS DE PETICION-----*/
+/*-------------------------------------------------------------------*/
+	/*CONTENEDOR DE TABS*/
+	.der-con-tabs{
+		margin-top: 10px;
+	}
+/*-------------------------------------------------------------------*/
