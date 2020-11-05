@@ -6,7 +6,8 @@ if(isset($_COOKIE['user_code']) && isset($_COOKIE['user_rol']) && ($_COOKIE['use
 		$total=0;
 		$x=0;
      
-			$conect= mysqli_connect("localhost","cpcorien_us_neo","neo2020_","cpcorien_neo_bd");
+			// $conect= mysqli_connect("localhost","cpcorien_us_neo","neo2020_","cpcorien_neo_bd");
+            $conect= mysqli_connect("localhost","root","","cpcorien_neo_bd");
         $query=mysqli_query($conect,"SELECT count(DISTINCT(empresas.id)),departamento.nombre FROM empresas,propuestas,convocatoria,ciudad,departamento,region WHERE empresas.id=propuestas.id_empresa and propuestas.id_convocatoria =convocatoria.id and empresas.ciudad=ciudad.codigo and ciudad.departamento= departamento.codigo and departamento.region=region.codigo and region.codigo=$_REQUEST[region]  group by region.nombre");
         
         while($datos=mysqli_fetch_array($query))

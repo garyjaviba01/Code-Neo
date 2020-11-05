@@ -11,7 +11,8 @@
         else
         return "";
     }
-    $conex=new mysqli("localhost","cpcorien_us_neo","neo2020_","cpcorien_neo_bd",3306);
+    // $conex=new mysqli("localhost","cpcorien_us_neo","neo2020_","cpcorien_neo_bd",3306);
+    $conex=new mysqli("localhost","root","","cpcorien_neo_bd",3306);
     $conex->query("SET NAMES 'UTF8'");
     if (mysqli_connect_errno()) {//si hay error en la conexioón
     	printf("La conexión con el servidor de base de datos falló: %s\n", mysqli_connect_error());

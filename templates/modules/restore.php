@@ -2,26 +2,50 @@
 	/*PARTICULAS*/
 	#particles-js{
 		height: 100vh;
-		width: 100%;
+		width: 60%;
 		position: fixed;
 		z-index: -1;
 	}
 </style>
-<div id="particles-js">
-</div>
-<div class="cont-login text-center">
-	<img src="templates/assets/logo_index.png" width="100%">
-	<h5 class="par-neo" style="margin-top:-15px!important;">Restauración de contraseña</h5>
-	<div class="f-log">
-		<p class="tx-inp"><i class="fas fa-mail"></i><span class="small ml-1">Correo electrónico</span></p>
-		<input type="email" class="inp-log" autofocus id="user" onfocus="reset()">
-		
-		<div id="response" style="margin:10px 0px;border-radius:5px;"></div>
-		<button type="button" class="btn btn-primary" style="width:100%;background:#00aff3!important;" onclick="restore()" >Restaurar</button>
-		<br><br><a href='index.php'>Iniciar sesión</a>
+<div class="row">
+	<div class="col-sm-12 col-md-7 col-lg-7 text-center">
+		<div id="particles-js">
+		</div>
+		<img class="img-login" src="templates/assets/logo_index.png" width="60%">
+
 	</div>
-	<div class="footer-log text-center small mt-2">
-		<p>&copy; 2020 CPC Oriente <br>Todos los derechos reservados</p>
+	<div class="col-sm-12 col-md-5 col-lg-5">
+		<div class="cont-login text-center">
+			<br>
+			<br>
+			<h4 class="par-neo tit-login" style="margin-top:-15px!important;">Restaurar Contraseña</h4>
+			<br>
+			<div class="f-log">
+				<div class="row">
+					<div class="col-2">
+						<span class="ico-login"><i class="fa fa-envelope"></i></span>
+						
+					</div>
+					<div class="col-10">
+						<input type="email" class="inp-log" autofocus id="user" onfocus="reset()" placeholder="Correo Electronico">
+					</div>
+				</div>
+
+			</div>
+			<div class="cont-btns text-center mt-4">
+				
+				<button type="button" class="btn-log" onclick="restore()">Restaurar</button>
+				<a href='index.php' class="olv-cont">Iniciar Sesión</a>
+			</div>
+			<div class="text-center pd-4 mt-4">
+					<div id="response" class="resp-login"></div>
+					
+			</div>
+		</div>
+		<div class="footer-log text-center small mt-2">
+			<p>&copy; 2020 CPC Oriente <br>Todos los derechos reservados</p>
+		</div>
+		
 	</div>
 </div>
 <script src="templates/js/plugins/particles.js"></script>

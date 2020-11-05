@@ -1,39 +1,60 @@
 /*-------------------------------------------------------------------------------------*/
 /*GLOBALES-----*/
 /*-------------------------------------------------------------------------------------*/
-/*Alertas*/
-body {
+  /*GLOBALES DEL BODY*/
+  body {
     font-family: Arial, Helvetica, sans-serif;
     background:#f8f9fa;
-}
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  /*PERSONALIZACION DEL SCROLL*/
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
 
-.conpes {
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .conpes {
     border-top: 1px solid #ccc;
     border-right: 1px solid #ccc;
     padding-right: 20px;
     border-radius: 5px;
     box-sizing: border-box;
-}
+  }
 
-.table td {
+  .table td {
     border-color: #29b5fb;
- 
-}
-.table th {
+
+  }
+  .table th {
     border-color: #29b5fb;
     background-color: #0075b0;
     color: #fff;
     vertical-align:middle!important;
     text-align:center!important;
-}
-.display_none {
+  }
+  .display_none {
     display: none !important;
-}
-.lactive {
+  }
+  .lactive {
     text-decoration: underline;
-}
+  }
 
-.pestanha_active {
+  .pestanha_active {
     margin-left: 3px;
 
     border: 1px solid #196b95 !important;
@@ -44,8 +65,8 @@ body {
     box-sizing: border-box;
     cursor: pointer;
     box-shadow: 1px 1px 7px #d7f5f3;
-}
-.pestanha {
+  }
+  .pestanha {
     margin-left: 3px;
     font-size: 16px;
 
@@ -56,9 +77,9 @@ body {
     color: #29b5fb;
     box-sizing: border-box;
     cursor: pointer;
-}
+  }
 
-.tooltiptext {
+  .tooltiptext {
     display: none;
     width: 230px;
     background-color: black;
@@ -69,9 +90,9 @@ body {
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-}
+  }
 
-.tooltiptext2 {
+  .tooltiptext2 {
     display: none;
     width: 500px;
     background-color: black;
@@ -82,39 +103,38 @@ body {
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-}
+  }
 
-.panel_divs
-{
-    
+  .panel_divs
+  {
+
     height:200px;
     font-size:14px;
     color:#000;
     background-color:#FFF;
-   border: 1px solid #CCC;
-   margin-bottom:50px;
-   text-align:center;
-   
-}
-#aguja{
+    border: 1px solid #CCC;
+    margin-bottom:50px;
+    text-align:center;
+  }
+  #aguja{
     position:absolute;
     margin-left:-265px;
     margin-top:80px;
-    
-}
 
-.heigthdivs {
+  }
+
+  .heigthdivs {
     height: 40px;
-}
-.notificacionesdiv {
+  }
+  .notificacionesdiv {
     width: 98%;
     margin-bottom: 10px;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 5px;
     border: 1px solid #ccc;
-}
-#notific {
+  }
+  #notific {
     position: absolute;
     background: red;
     padding: 1px 4px;
@@ -124,20 +144,20 @@ body {
     color: #fff;
     font-weight: bold;
     display: none;
-}
-.busqueda {
+  }
+  .busqueda {
     margin-left: 20px;
     padding: 5px;
     border-radius: 5px;
     background: #f8f9fa;
 
     cursor: pointer;
-}
-.busqueda i {
+  }
+  .busqueda i {
     font-size: 15px;
     color: #29b5fb;
-}
-#message {
+  }
+  #message {
     padding:20px;
     box-sizing:border-box;
     text-align:center;
@@ -153,76 +173,76 @@ body {
     color: #fff;
     animation: up 0.6s;
     animation-fill-mode: forwards;
-}
+  }
 
-#diveva {
+  #diveva {
     padding: 10px 15px;
     overflow-x: auto;
-}
-#divsub {
+  }
+  #divsub {
     padding: 10px 15px;
     overflow-x: auto;
-}
-#divsub2 {
+  }
+  #divsub2 {
     padding: 10px 15px;
     overflow-x: auto;
-}
-#divcor {
+  }
+  #divcor {
     padding: 0 15px 0 15px;
     overflow-x: auto;
-}
-.thumbtack {
+  }
+  .thumbtack {
     -ms-transform: rotate(90deg); /* IE 9 */
     transform: rotate(90deg);
     position: absolute;
     top: 85px;
     right: -4px;
-}
-.thumbtack2 {
+  }
+  .thumbtack2 {
     transition: all 0.5s ease;
     -ms-transform: rotate(0deg); /* IE 9 */
     transform: rotate(0deg);
-}
-.icon_sesion {
+  }
+  .icon_sesion {
     cursor: pointer;
     margin-right: 10px;
     font-size: 20px;
     color: #ccc;
-}
+  }
 
-.icon_sesion3 {
+  .icon_sesion3 {
     cursor: pointer;
     margin-right: 15px;
     font-size: 20px;
     color: red;
-}
-.icon_evalua22{
+  }
+  .icon_evalua22{
     cursor: pointer;
     margin-left: 5px;
     margin-bottom:10px;
     font-size: 15px;
-}
+  }
 
-.icon_sesion2 {
+  .icon_sesion2 {
     cursor: pointer;
     margin-right: 15px;
     font-size: 20px;
     color: #196b95;
-}
-.icon_evalua {
+  }
+  .icon_evalua {
     cursor: pointer;
     font-size: 25px;
     color: #196b95;
-}
-.icon_acor {
+  }
+  .icon_acor {
     cursor: pointer;
     right: 30px;
     font-size: 25px;
     color: #ccc;
     position: absolute;
     float: right;
-}
-.encabezadospro {
+  }
+  .encabezadospro {
     background: #f8f9fa;
     text-align: left !important;
     cursor: pointer;
@@ -236,8 +256,8 @@ body {
     margin-bottom: 25px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-.encabezadoseva {
+  }
+  .encabezadoseva {
     background: #f8f9fa;
     text-align: left !important;
     cursor: pointer;
@@ -252,12 +272,12 @@ body {
     margin-bottom: 25px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-h6 {
+  }
+  h6 {
     font-size: 17px;
     font-weight: bold;
-}
-.icon_up {
+  }
+  .icon_up {
     cursor: pointer;
     right: 15px;
     font-size: 25px;
@@ -267,180 +287,398 @@ h6 {
     transition: all 0.5s ease;
     bottom: 15px;
     z-index: 5000;
-}
-.icon_up:hover {
+  }
+  .icon_up:hover {
     -ms-transform: scale(2, 2); /* IE 9 */
     transform: scale(2, 2);
     color: #0075b0;
-}
+  }
 
-@keyframes up {
+  @keyframes up {
     from {
-        bottom: -80px;
+      bottom: -80px;
     }
     to {
-        bottom: 8px;
+      bottom: 8px;
     }
-}
-#message div[class="col-10"] {
+  }
+  #message div[class="col-10"] {
     padding: 5px;
     text-align: center;
-}
-#message button {
+  }
+  #message button {
     display:none;
-}
+  }
 /*-------------------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------------------*/
 /*LOGIN COMPONETS-----*/
 /*-------------------------------------------------------------------------------------*/
-/*Contenedor del Login*/
-.cont-login {
-    position: relative;
-    width: 26%;
+  /*Contenedor del Login*/
+  .cont-login {
+    width: 80%;
     height: auto;
-    padding: 4px;
-    top: 120px;
+    padding: 25px 5px;
     margin: 0 auto;
-    z-index: 99;
-    background-color: #f9f9f9c7;
-    border-radius: 10px;
+    margin-top: 20%;
+    background-color: #F8F8F9;
+    border-radius: 25px;
     border: 1px solid #efefef;
-}
-.cont-login img,
-h5 {
-    padding: 10px;
-    margin: 0 0;
-}
-.cont-login h5 {
-    color: #666;
-}
-/*Formulario login*/
-.f-log {
-    width: 90%;
+  }
+  .img-login{
+    margin-top: 200px;
+  }
+  .tit-login {
+    color: #00b0f4;
+  }
+  /*Formulario login*/
+  .f-log {
+    width: 100%;
     margin: 0 auto;
     padding: 10px;
-}
-/*Inputs formulario*/
-.inp-log {
-    display: block;
+  }
+  /*Iconos Textos*/
+  .ico-login{
+    color:#00b0f4;
+    background:#fff;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    border:2px solid #00b0f4;
+  }
+  /*Inputs formulario*/
+  .inp-log {
     margin: 0 auto;
     width: 100%;
-    margin-top: 8px;
-    border: none;
-    padding: 8px;
-    border-bottom: 2px solid #00aff3;
-    opacity: 0.8;
-}
-/*Textos de los inputs*/
-.tx-inp {
-    text-align: left;
-    margin: 0 0;
-    font-size: 20px;
+    border-radius: 25px;
+    border:2px solid #00b0f4;
+    padding: 10px;
+    background: #fff;
     color: #666;
-    font-weight: 800;
-}
-/*Boton del login*/
-.btn-log {
-    width: 80px;
-    height: 80px;
-    border-radius: 30%;
+  }
+  /*Respuestas*/
+  .resp-login{
+    padding: 8px;
+    border-radius: 15px;
+    width: 60%;
+    margin: 0 auto;
+  }
+  /*Boton del login*/
+  .btn-log {
+    width: 50%;
+    height: 45px;
+    border-radius: 45px;
     border: 1px solid #00aff3;
     background: none;
     color: #17a1d6;
     font-weight: 800;
-    transition: border-radius 0.3s, background 0.4s;
-}
-.btn-log:hover {
-    border-radius: 50%;
+    transition: 0.3s;
+  }
+  .btn-log:hover{
     background: #00aff3;
     color: #fff;
-    opacity: 0.5;
-}
-/*Footer*/
-.footer-log {
+  }
+  .olv-cont{
+    display: block;
+    margin-top: 5px;
+  }
+  /*Footer*/
+  .footer-log {
+    position: relative;
     color: #666;
-}
+    bottom: 0;
+  }
 /*-------------------------------------------------------------------------------------
 
 /*-------------------------------------------------------------------------------------*/
 /*USERS COMPONETS-----*/
 /*-------------------------------------------------------------------------------------*/
-.nav-users-data {
-   
+  /*BARRA DE NAVEGACION SUPERIOR ====================*/
+  /*Barra de navegacion*/
+  .nav-users {
     color: #ccc;
-   
-}
+    /*background: #00aff3;*/
+    background: #fff;
+    height: 70px;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);  
+    /*box-shadow: 5px 5px 5px #C6C6C6;  */
+  }
+  /*Listado de Botones Funciones*/
+  .nav-btn-funs{
+    border-right: 4px solid #00aff3;
+    border-radius: 0px 40px 40px 0px;
+    width: 80px;
+    padding-right: 10px;
+    transition: 0.9s;
+  }
+  /*Theme de la Lista*/
+  .cust-nav{
+    background-color: #00aff3;
 
-.sidenav {
-    z-index: 20000;
+  }
+  /*Contenedor imagen barra*/
+  .cont-img-nav{
+    height: 70px;
+    width: 100px;
+    background: #fff;
+    border-right: 3px solid #00aff3;
+    border-radius: 0px 40px 40px 0px;
+  }
+  /*Contenedor Botones de Usuario*/
+  .cont-btns-user{
+    background-color: #00aff3;
+    height: 70px;
+    width: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 40px 0px 0px 40px;
+  }
+  /*Iconos botones de usuario*/
+  .icon-bnt-users{
+    color: #fff;
+    margin: 10px;
+    margin-top: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 4px solid #fff;
+    padding: 8px;
+    border-radius: 50%;
+
+  }
+  .icon-bnt-users:hover{
+    color: #00aff3;
+    background: #fff;
+  }
+  /*Boton menu de funciones*/
+  .btn-menu-functions{
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    /*background-color: #fff;*/
+    background-color: #fff;
+    border: 1px solid #8AD9F8;
+    /*color: #00aff3;*/
+    color: #00aff3;
+    transform: rotate(-90deg);
+    transition: 1s;
+  }
+  /*BOTONES VISTAS DE USUARIO ROL ====================*/
+  /*Botones*/
+  .btn-fun-user{
+    display: none;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #8AD9F8;
+    font-size: 0.8rem;
+    width: 140px;
+    text-align: left;
+    margin-right: 5px;
+    border-radius: 40px 40px 40px 40px;
+    color:#68B6FF;
+    font-style: oblique;
+    font-weight: 800;
+    opacity: 0;
+    animation: anim_btns 0.5s ease-out;
+    animation-fill-mode: forwards;
+    transition: 0.4s;
+  }
+  /*Titulo de Vista*/
+  .tit-view{
+    padding: 13px;
+    font-size: 0.6rem;
+  }
+  @keyframes anim_btns {
+    from{opacity: 0}
+    to{opacity: 1}
+  }
+  .btn-fun-user:hover{
+    background-color: #48CCFF;
+    color: #fff;
+  }
+  /*Boton Activo*/
+  .btn-nav-active {
+    background-color: #48CCFF;
+    color: #fff;
+  }
+  /*Espan de Iconoes*/
+  .icon-btn-funs{
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid #8AD9F8;
+    color: #00aff3;
+    background: #fff;
+  }
+  /*VISTAS DE INFORMACION USUARIO ROL ====================*/
+  /*Contenedor*/
+  .info-view{
+    margin-top: 5px;
+    margin-left: 10px;
+    background-color: #00aff3;
+    padding: 4px 50px;
+    color: #fff!important;
+    border-radius: 50px;
+    border: 2px solid #8AD9F8;
+  }
+  /*Nombre de usuario*/
+  .nom-user{
+    border-bottom: 1px solid #fff;
+  }
+  /*Rol de usuario*/
+  .rol-user{
+    font-style: oblique;
+    font-weight: 600;
+  }
+  /*BARRA DE NAVEGACION LATERAL ====================*/
+  /*Barra*/
+  .sidenav-view{
+    z-index: 1000;
+    width: 80px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background:#00aff3;
+  }
+  /*Contenedor Botnes Barra*/
+  .side-btns-cont{
+    width: 100%;
+    height: auto;
+    padding-bottom: 15px;
+    padding-top: 70px;
+    background-color: #fff;
+    border-radius: 0 0 40px 40px;
+  }
+  /*Contenendor boton set*/
+  .btn-set{
+    width: auto;
+    margin: 0 0;
+    margin-bottom: -30px;
+  }
+  /*Botones laterales*/
+  .btn-side-view{
+    z-index: 20;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px 0;
+    /*background: #8AD9F8;*/
+    background: #fff;
+    color: #00aff3;
+    /*border: 2px solid #8AD9F8;*/
+    border: 2px solid #00aff3;
+    font-size: 1.5rem;
+    transition: 0.2s;
+  }
+  .btn-side-view:hover{
+    background: #00aff3;
+    border: 2px solid #8AD9F8;
+    color: #fff;
+  }
+  .btn-side-active{
+    background: #00aff3;
+    border: 2px solid #8AD9F8;
+    color: #fff;
+  }
+  /*Etiqueta del Boton*/
+  .toltip-btn{
+    opacity: 0;
+    width: 300px;
+    border-radius: 30px;
+    position: relative;
+    top:-48px;
+    left:68px;
+    padding: 6px 12px;
+    background: #00aff3;
+    border: 2px solid #8AD9F8;
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 0 0;
+    transition: 0.3s;
+  }
+  .toltip-btn-active{
+    opacity: 1;
+  }
+  /*Boton activador latera*/
+  #btn-side-on{
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center; 
+    font-size: 1rem;
+  }
+  /**/
+  .sidenav {
     position: fixed;
     /*border: 1px solid red;*/
     height: 100vh;
     width: 200px;
-   background:#f8f9fa;
-   border-right: 1px solid #e0e0e0;
+    background:#f8f9fa;
+    border-right: 1px solid #e0e0e0;
     transition: margin-left 0.5s ease;
     /*box-shadow: 1px 1px 4px #E0E0E0;*/
-}
+  }
 
-.sidenav2 {
+  .sidenav2 {
     margin-left: -195px;
     transition: all 0.5s ease;
     background:#f8f9fa;
     border-right: 1px solid #e0e0e0;
     /*box-shadow: 1px 1px 4px #E0E0E0;*/
-}
+  }
 
-.sidenav2:hover {
+  .sidenav2:hover {
     margin-left: 0;
-   
+
     /*box-shadow: 1px 1px 4px #E0E0E0;*/
-}
-/*Cabezal sidenav*/
-.head-nav {
+  }
+  /*Cabezal sidenav*/
+  .head-nav {
     border-bottom: 1px solid #e0e0e0;
-}
-/*Usuario sidenav*/
-.user-nav {
+  }
+  /*Usuario sidenav*/
+  .user-nav {
     color: #666;
     padding: 10px;
-}
-/*Botonera sidenav*/
-.btns-nav {
+  }
+  /*Botonera sidenav*/
+  .btns-nav {
     padding: 5px;
-}
-#mtitle {
+  }
+  #mtitle {
     background: #0075b0;
     color: #fff;
-}
-table td {
+  }
+  table td {
     text-align: left;
-}
-/*Botones sidenav*/
+  }
+  /*Botones sidenav*/
 
-.btn-nav {
+  .btn-nav {
     display: block;
     width: 100%;
     height: 45px;
     font-size: 16px;
     margin: 0 auto;
     margin-top: 5px;
-   
+
     color: #0075b0;
     border: 0px solid #29b5fb;
     background:#f8f9fa;
-}
-.btn-nav:hover {
+  }
+  .btn-nav:hover {
     background: #f8f9fa;
     color: #0075b0;
-}
-.btn-nav-active {
-    background-color: #0075b0;
-    color: #f8f9fa;
-}
-/*Botones de usuario config*/
-.btn-user-nav {
+  }
+  /*Botones de usuario config*/
+  .btn-user-nav {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -448,51 +686,84 @@ table td {
     background: none;
     color: #666;
     transition: border 0.3s;
-}
-.btn-user-nav:hover {
+  }
+  .btn-user-nav:hover {
     color: #00aef1;
     border: 6px solid #00aef1;
-}
-/*Panel o dash*/
-.panel {
+  }
+  
+  /*Panel o dash*/
+  .panel {
     position: relative;
-    height: auto;
     z-index: 1;
-    /*border: 1px solid red;*/
-    margin-left: 200px;
+    /*margin-left: 200px;*/
+    padding-top: 75px;
+    padding-left: 100px; 
+    padding-right: 50px; 
     background-color: #f8f9fa;
-    
     transition: margin-left 0.5s ease;
-}
-.panel2 {
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  .panel2 {
     /*border: 1px solid red;*/
     margin-left: 0px;
     transition: all 0.5s ease;
-}
+    
+  }
+   
+  /*CONTENEDOR DE TABS ====================*/
+  .tabs-content{
+    overflow-x: hidden;
+    padding-bottom: 20px;
+  }
 /*-------------------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------------------*/
 /*FUNCIONES DE NODO-----*/
 /*-------------------------------------------------------------------------------------*/
-/*Navegacion de las Fuciones de nodo*/
-/*Titulo del Nodo*/
-.tit-nodo {
-    color: #196b95;
-    position: absolute;
-    left: 45%;
-    top: 5px;
-}
-/*Navegacion del Nodo*/
-.nav-functions {
+  /*Navegacion de las Fuciones de nodo*/
+  /*Titulo del Nodo*/
+  .tit-nodo {
+    display: none;
+    background-color: #fff;
+    color: #207DAD;
+    border:4px solid #8AD9F8;
+    text-align: center;
+    border-radius: 40px;
+    width: 300px;
+    opacity: 0;
+    margin-left: -25px;
+    margin-top: 10px;
+    animation: anTit 0.4s ease forwards;
+  }
+  @keyframes anTit {
+    from{opacity: 0; margin-left: -25px;}
+    to{opacity: 1; margin-left: 0}
+  }
+  /*Navegacion del Nodo*/
+  .nav-functions {
+    /*display: none;*/
     padding: 5px;
-    background:#f8f9fa;
-    width: 100%;
-}
-#conv{
+    width: contain;
+    margin-top: 10px;
+    border-bottom: 2px solid #8AD9F8;
+  }
+  #conv{
     display:none;
-}
-/*Iconos Botones*/
-.incons-function {
+  }
+  /*Botones de navegacion nodo*/
+  .btn-functions {
+    padding: 8px 25px;
+    margin: 5px 5px;
+    background: #fff;
+    border: 1px solid #666;
+    border-radius: 40px;
+    color: #207DAD;
+    width: 250px;
+  }
+  /*Iconos Botones*/
+  .incons-function {
     width: 35px !important;
     height: 35px !important;
     border-radius: 50%;
@@ -500,22 +771,9 @@ table td {
     text-align: center;
     line-height: 1.5;
     border: 1px solid #29b5fb;
-}
-/*Botones de navegacion nodo*/
-.btn-functions {
-    height:40px;
-    padding: 4px 15px;
-    margin: 5px;
-    background: #f8f9fa;
-    border: none;
-    color: #0075B0;
-    font-size: 16px;
-  
-   
-}
-
-.btn-functions-active {
+  }
+  .btn-functions-active {
     background: #0075b0;
     color: #f8f9fa;
-}
+  }
 /*-------------------------------------------------------------------------------------*/

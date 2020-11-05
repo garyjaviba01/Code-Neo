@@ -14,14 +14,21 @@
 	<link rel="stylesheet" href="templates/css/style-dk.css">
 	<link rel="stylesheet" href="templates/css/style-tec.css">
 	<link rel="icon" href="templates/assets/Logo_Neo_Corto.png">
+  <link rel="stylesheet" href="templates/css/styles-panel.css">
 	<!-- JQUERY-------------------------------------------------- -->
 	<script src="templates/js/jquery-3.0.0.min.js"></script>
-	<script src="templates/js/maker.js"></script>
-	<!-- UTILIDADES-------------------------------------------------- -->
-	<script src="templates/js/utilities.js"></script>
-	<script src="templates/js/bootstrap.min.js"></script>
-	<script src="templates/js/javascript.js"></script>
+  <!-- UTILIDADES-------------------------------------------------- -->
+  <script src="templates/js/maker.js"></script>
+  <script src="templates/js/utilities.js"></script>
+  <!-- BOOTSTRAP MIN JS-------------------------------------------------- -->
+  <script src="templates/js/bootstrap.min.js"></script>
 
+	<!-- LOGICAS-------------------------------------------------- -->
+  <!-- CONTROLADOR DE NAVEGACION -->
+  <script src="templates/js/navs-control.js"></script>
+  <!-- SCRIPT DE FUNCIONES -->
+  <script src="templates/js/javascript.js"></script>
+  
 </head>
 <style>
 </style>
@@ -50,7 +57,7 @@
       </div>
       
     </div>
-  </div>
+</div>
 <div class="modal fade" id="myModal2" role="dialog">
     <div class="modal-dialog">
     
@@ -69,7 +76,7 @@
       </div>
       
     </div>
-  </div>
+</div>
 <!-- ===================================================
 MODAL DERECHOS DE PETICION
 ==================================================== -->
@@ -93,4 +100,5 @@ MODAL DERECHOS DE PETICION
     </div>
 </div>
 </body>
+<script src="templates/js/plugins/progressbar.min.js"></script>
 </html>

@@ -8,8 +8,8 @@ class transacciones
     function __construct()
     {
         //incluir el archivo conexion
-        $conex = mysqli_connect("localhost", "cpcorien_us_neo", "neo2020_", "cpcorien_neo_bd");
-        //	$conex= mysqli_connect("localhost","root","","convecfc_neo");
+        // $conex = mysqli_connect("localhost", "cpcorien_us_neo", "neo2020_", "cpcorien_neo_bd");
+    	$conex = mysqli_connect("localhost","root","","cpcorien_neo_bd");
         mysqli_query($conex, "set names 'utf8'");
         //asignar a la variable $conexion el retorno del metodo conectar()
         $this->conexion = $conex;

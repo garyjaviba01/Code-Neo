@@ -194,7 +194,6 @@ function upd_announcement(){
 		}
 		// Ejecutar Envio
 		request.request_operation();
-	
 }
 /*FUNCION: Listado de Convocatorias*/
 function list_announcements(){
@@ -309,9 +308,6 @@ function list_announcements2(){
 	// Ejecutar Peticion
 	request.request_list();
 }
-
-
-
 
 /*FUNCION: Activa elementos de criterios*/
 function evaluation_crit(obj){
@@ -655,12 +651,8 @@ function add_pers(){
 		// Operacion
 		request.request_operation();
 	}
-
 }
-
-
-
-////////////////////////////
+/*FUNCION: Actuliza el Usuario*/
 function upd_userr(){
 	// Contador de inputs
 	var inps_cont = 0;
@@ -751,13 +743,11 @@ function upd_userr(){
 	 	inps_form[4].style.borderColor = "#00aef1";
 		inps_exp++;
 	}
-		if($("#ti").val()==null || $("#sel-depa").val()==null || $("#sel-rol").val()==null)
-	{
+	if($("#ti").val()==null || $("#sel-depa").val()==null || $("#sel-rol").val()==null){
 	 	message = "<p class='mt-2'>Seleccione los campos obligatorios</p>";
 		alerts_tec(message);   
-	}
-	else{
-	inps_exp++; 
+	}else{
+		inps_exp++; 
 	    
 	}
 
@@ -810,8 +800,8 @@ function upd_userr(){
 		// Operacion
 
 		request.request_operation();
-}
 	}
+}
 /*FUNCION: Crea un nuevo usuario*/
 function list_pers(){
 	// Objeto Request
@@ -883,79 +873,75 @@ function list_pers(){
 	}
 	// Traer Listado
 	request.request_list();
-
 }
 
-
-function DeleteConvo(id){
-    
+function DeleteConvo(id){   
   if(confirm("¿ Está seguro que desea eliminar la convocatoria?")){
   
-  var sendform = new FormData();
- sendform.append("tec-del-convo","1")
- sendform.append("id",id)
-  $.ajax({
-		type:'POST',
-		url:'templates/filters/fil-tec.php',
-		data:sendform,
-		cache:false,
-		processData:false,
-	  contentType:false,
-		beforeSend:function(){
-		// debug.log("Momento por favor");
-		},
-	  success:function(e){
-	    // Cargar el listado de convocatorias en el elemento div
+		var sendform = new FormData();
+		sendform.append("tec-del-convo","1")
+		sendform.append("id",id)
+		$.ajax({
+			type:'POST',
+			url:'templates/filters/fil-tec.php',
+			data:sendform,
+			cache:false,
+			processData:false,
+		  contentType:false,
+			beforeSend:function(){
+			// debug.log("Momento por favor");
+			},
+		  success:function(e){
+		    // Cargar el listado de convocatorias en el elemento div
 
-	    message = "<h4 style='color:#FFB24F' class='mt-2'><i class='fa fa-exclamation-circle'></i><br/>"+e+"</h4>";
-			alerts_tec(message);
-			if(String(e).indexOf("eliminada")!=-1){
-	   convo_fun(3, $("#btnlist")) }
-		}
-	});
-}
+		    message = "<h4 style='color:#FFB24F' class='mt-2'><i class='fa fa-exclamation-circle'></i><br/>"+e+"</h4>";
+				alerts_tec(message);
+				if(String(e).indexOf("eliminada")!=-1){
+		   convo_fun(3, $("#btnlist")) }
+			}
+		});
+	}
 }
 function delUser(id){
     
-  if(confirm("¿ Está seguro que desea eliminar el usuario ?")){
+	if(confirm("¿ Está seguro que desea eliminar el usuario ?")){
   
-  var sendform = new FormData();
- sendform.append("tec-del-per","1")
- sendform.append("id",id)
-  $.ajax({
-		type:'POST',
-		url:'templates/filters/fil-tec.php',
-		data:sendform,
-		cache:false,
-		processData:false,
-	  contentType:false,
-		beforeSend:function(){
-		// debug.log("Momento por favor");
-		},
-	  success:function(e){
-	    // Cargar el listado de convocatorias en el elemento div
+	  var sendform = new FormData();
+		sendform.append("tec-del-per","1")
+		sendform.append("id",id)
+		$.ajax({
+			type:'POST',
+			url:'templates/filters/fil-tec.php',
+			data:sendform,
+			cache:false,
+			processData:false,
+		  contentType:false,
+			beforeSend:function(){
+			// debug.log("Momento por favor");
+			},
+		  success:function(e){
+		    // Cargar el listado de convocatorias en el elemento div
 
-	  	
-	  if(String(e).indexOf("eliminado")!=-1){
-	    message = "<h4 style='color:#FFB24F' class='mt-2'><i class='fa fa-exclamation-circle'></i><br/>"+e+"</h4>";
-			alerts_tec(message);
-	  personal_fun(2, $("#lstper")) }
-	  else{
-	      message = "<h4 style='color:#FFB24F' class='mt-2'><i class='fa fa-exclamation-circle'></i><br/>No se puede eliminar al usuario</h4>";
-			alerts_tec(message);
-	  }
-	
-		}
-	});
+		  	
+		  if(String(e).indexOf("eliminado")!=-1){
+		    message = "<h4 style='color:#FFB24F' class='mt-2'><i class='fa fa-exclamation-circle'></i><br/>"+e+"</h4>";
+				alerts_tec(message);
+		  personal_fun(2, $("#lstper")) }
+		  else{
+		      message = "<h4 style='color:#FFB24F' class='mt-2'><i class='fa fa-exclamation-circle'></i><br/>No se puede eliminar al usuario</h4>";
+				alerts_tec(message);
+		  }
+
+			}
+		});
+	}
 }
-}
-function UpdState(id,estado){
-    
-  var sendform = new FormData();
- sendform.append("tec-upd-est","1")
- sendform.append("id",id)
- sendform.append("st",estado)
-  $.ajax({
+function UpdState(id,estado){  
+	var sendform = new FormData();
+	sendform.append("tec-upd-est","1")
+	sendform.append("id",id)
+	sendform.append("st",estado)
+	$.ajax({
 		type:'POST',
 		url:'templates/filters/fil-tec.php',
 		data:sendform,
@@ -974,180 +960,170 @@ function UpdState(id,estado){
 	  }
 	});
 }
+function editarConvo(id,fila){
+	var table =document.getElementById("tblconv")
+	var nom= table.rows[fila].cells[1].innerHTML
+	var con=table.rows[fila].cells[2].innerHTML
+	var fec_ini=table.rows[fila].cells[3].innerHTML
+	var fec_cie=table.rows[fila].cells[4].innerHTML
+	var ent=table.rows[fila].cells[5].innerHTML
+	var urlconv=table.rows[fila].cells[7].innerHTML
 
-
-function editarConvo(id,fila)
-{
-var table =document.getElementById("tblconv")
-var nom= table.rows[fila].cells[1].innerHTML
-var con=table.rows[fila].cells[2].innerHTML
-var fec_ini=table.rows[fila].cells[3].innerHTML
-var fec_cie=table.rows[fila].cells[4].innerHTML
-var ent=table.rows[fila].cells[5].innerHTML
-var urlconv=table.rows[fila].cells[7].innerHTML
-
-var html_fun = ''+
-			'<div class="form-convo container">'+
-				'<div class="row"><div class="col-md-6"><div class="form-group">'+
-				  '<label>Nombre / Titulo</label>'+
-				  '<input type="hidden"  class="inps-forms" id="cod" value="'+id+'"><input type="text" id="nom" class="form-control inps-forms">'+
-				'</div></div>'+
-				'<div class="col-md-6"><div class="form-group">'+
-				  '<label>Descripción / Contenido:</label>'+
-				  '<textarea id="con" class="form-control inps-forms" rows="2"></textarea>'+
-				'</div></div></div>'+
-				'<div class="row"><div class="col-md-6"><div class="form-group">'+
-				  '<label>Entidad Contratante</label>'+
-				  '<input type="text" id="ent" class="form-control inps-forms">'+
-				'</div></div>'+
-				''+
-					'<div class="col-6">'+
-						'<div class="form-group">'+
-						  '<label>Fecha de Inicio</label>'+
-						  '<input type="date" id="fec_ini" class="form-control inps-forms">'+
-						'</div>'+
+	var html_fun = ''+
+				'<div class="form-convo container">'+
+					'<div class="row"><div class="col-md-6"><div class="form-group">'+
+					  '<label>Nombre / Titulo</label>'+
+					  '<input type="hidden"  class="inps-forms" id="cod" value="'+id+'"><input type="text" id="nom" class="form-control inps-forms">'+
 					'</div></div>'+
-					'<div class="row"><div class="col-6">'+
-						'<div class="form-group">'+
-						  '<label>Fecha de Cierre</label>'+
-						  '<input type="date"  id="fec_cie" class="form-control inps-forms">'+
-						'</div>'+
-					'</div>'+
-				''+
-				'<div class="col-6"><div class="form-group">'+
-				  '<label>Página de la Convocatoria <span class="small">(Opcional)</span></label>'+
-				  '<input type="text" class="form-control inps-forms-no" id="url-conv">'+
-				'</div>'+
-				'<div></div>'+
+					'<div class="col-md-6"><div class="form-group">'+
+					  '<label>Descripción / Contenido:</label>'+
+					  '<textarea id="con" class="form-control inps-forms" rows="2"></textarea>'+
+					'</div></div></div>'+
+					'<div class="row"><div class="col-md-6"><div class="form-group">'+
+					  '<label>Entidad Contratante</label>'+
+					  '<input type="text" id="ent" class="form-control inps-forms">'+
+					'</div></div>'+
 					''+
-				'</div>'+
-				'<div class="col-12"><br><button class="btn-functions" onclick="upd_announcement()"><i class="fas fa-check"></i>&nbsp;Editar</button></div>'+
-			'</div>';
-$("#cont-convo-fun").html(html_fun)
+						'<div class="col-6">'+
+							'<div class="form-group">'+
+							  '<label>Fecha de Inicio</label>'+
+							  '<input type="date" id="fec_ini" class="form-control inps-forms">'+
+							'</div>'+
+						'</div></div>'+
+						'<div class="row"><div class="col-6">'+
+							'<div class="form-group">'+
+							  '<label>Fecha de Cierre</label>'+
+							  '<input type="date"  id="fec_cie" class="form-control inps-forms">'+
+							'</div>'+
+						'</div>'+
+					''+
+					'<div class="col-6"><div class="form-group">'+
+					  '<label>Página de la Convocatoria <span class="small">(Opcional)</span></label>'+
+					  '<input type="text" class="form-control inps-forms-no" id="url-conv">'+
+					'</div>'+
+					'<div></div>'+
+						''+
+					'</div>'+
+					'<div class="col-12"><br><button class="btn-functions" onclick="upd_announcement()"><i class="fas fa-check"></i>&nbsp;Editar</button></div>'+
+				'</div>';
+	$("#cont-convo-fun").html(html_fun)
 
 
-$("#nom").val(nom)
-$("#con").val(con)
-$("#fec_ini").val(fec_ini)
-$("#fec_cie").val(fec_cie)
-$("#ent").val(ent)
-$("#url-conv").val(urlconv)
-
+	$("#nom").val(nom)
+	$("#con").val(con)
+	$("#fec_ini").val(fec_ini)
+	$("#fec_cie").val(fec_cie)
+	$("#ent").val(ent)
+	$("#url-conv").val(urlconv)
 }
-function updUser(id,fila)
-{
-var table =document.getElementById("tblusu")
-var nom= table.rows[fila].cells[5].innerHTML
-var ti=table.rows[fila].cells[3].innerHTML
-var ni=table.rows[fila].cells[4].innerHTML
-var tel=table.rows[fila].cells[7].innerHTML
-var dep=table.rows[fila].cells[10].innerHTML
-var ciu=table.rows[fila].cells[9].innerHTML
-var dir=table.rows[fila].cells[8].innerHTML
-var pro=table.rows[fila].cells[11].innerHTML
-var ema=table.rows[fila].cells[6].innerHTML
-var rol=table.rows[fila].cells[2].innerHTML
-var st=table.rows[fila].cells[12].innerHTML
+function updUser(id,fila){
+	var table =document.getElementById("tblusu")
+	var nom= table.rows[fila].cells[5].innerHTML
+	var ti=table.rows[fila].cells[3].innerHTML
+	var ni=table.rows[fila].cells[4].innerHTML
+	var tel=table.rows[fila].cells[7].innerHTML
+	var dep=table.rows[fila].cells[10].innerHTML
+	var ciu=table.rows[fila].cells[9].innerHTML
+	var dir=table.rows[fila].cells[8].innerHTML
+	var pro=table.rows[fila].cells[11].innerHTML
+	var ema=table.rows[fila].cells[6].innerHTML
+	var rol=table.rows[fila].cells[2].innerHTML
+	var st=table.rows[fila].cells[12].innerHTML
 
-var html_fun = 	'<div class="row"><br>'+
-	'	<br><div class="col-md-12" style="color:red;text-align:left;">Campos obligatorios *</div><br><br>'+
-						'<div class="col-md-6">'+
-							'<div class="form-group">'+
-					  		'<label>Nombres/Apellidos<span style="color:red;">*</span></label>'+
-					  		'<input type="hidden" class="inps-forms" id="cod" value="'+id+'">'+
-			  				'<input type="text" class="form-control inps-forms" placeholder="Nombres y apellidos" id="nom" >'+
-							'</div>'+
-				  		'<label>Tipo de Identificación <span style="color:red;">*</span></label>'+
-						 	'<select  class="custom-select inps-forms mb-3" id="ti" >'+
-					    	'<option selected disabled value="none">Seleccione...</option>'+
-					    	'<option value="1">Cédula de ciudadanía</option>'+
-					    	'<option value="2">Pasaporte</option>'+
-					    	'<option value="3">Cédula de extranjeria</option>'+
-					    	'<option value="4">NIT</option>'+
-					  	'</select>'+
-					  	'<div class="form-group">'+
-					  		'<label>Número de Identificación <span style="color:red;">*</span></label>'+
-			  				'<input type="text" class="form-control inps-forms" placeholder="Número de identificación" id="ni">'+
-							'</div>'+
-							'<div class="form-group">'+
-					  		'<label>Teléfono <span style="color:red;">*</span></label>'+
-			  				'<input type="text" class="form-control inps-forms" placeholder="Teléfono" id="tel">'+
-							'</div>'+
-						
-								 '<div class="form-group">'+
-									'<label>Departamento de Residencia<span style="color:red;">*</span></label>'+
-								 	'<select id="sel-depa" class="custom-select inps-forms mb-3" onchange="get_dep_cities(this, `sel-ciud`)">'+
-							    	'<option selected disabled value="none" id="opc-dep-deft">Departamento</option>'+
-							  	'</select>'+
+	var html_fun = 	'<div class="row"><br>'+
+		'	<br><div class="col-md-12" style="color:red;text-align:left;">Campos obligatorios *</div><br><br>'+
+							'<div class="col-md-6">'+
+								'<div class="form-group">'+
+						  		'<label>Nombres/Apellidos<span style="color:red;">*</span></label>'+
+						  		'<input type="hidden" class="inps-forms" id="cod" value="'+id+'">'+
+				  				'<input type="text" class="form-control inps-forms" placeholder="Nombres y apellidos" id="nom" >'+
+								'</div>'+
+					  		'<label>Tipo de Identificación <span style="color:red;">*</span></label>'+
+							 	'<select  class="custom-select inps-forms mb-3" id="ti" >'+
+						    	'<option selected disabled value="none">Seleccione...</option>'+
+						    	'<option value="1">Cédula de ciudadanía</option>'+
+						    	'<option value="2">Pasaporte</option>'+
+						    	'<option value="3">Cédula de extranjeria</option>'+
+						    	'<option value="4">NIT</option>'+
+						  	'</select>'+
+						  	'<div class="form-group">'+
+						  		'<label>Número de Identificación <span style="color:red;">*</span></label>'+
+				  				'<input type="text" class="form-control inps-forms" placeholder="Número de identificación" id="ni">'+
 								'</div>'+
 								'<div class="form-group">'+
-									'<label>Ciudad de Residencia</label>'+
-								 	'<select id="sel-ciud" class="custom-select inps-forms mb-3" disabled>'+
-							    	'<option selected disabled value="none" id="opc-ciud-deft">Ciudad</option>'+
-							  	'</select>'+
+						  		'<label>Teléfono <span style="color:red;">*</span></label>'+
+				  				'<input type="text" class="form-control inps-forms" placeholder="Teléfono" id="tel">'+
+								'</div>'+
+							
+									 '<div class="form-group">'+
+										'<label>Departamento de Residencia<span style="color:red;">*</span></label>'+
+									 	'<select id="sel-depa" class="custom-select inps-forms mb-3" onchange="get_dep_cities(this, `sel-ciud`)">'+
+								    	'<option selected disabled value="none" id="opc-dep-deft">Departamento</option>'+
+								  	'</select>'+
+									'</div>'+
+									'<div class="form-group">'+
+										'<label>Ciudad de Residencia</label>'+
+									 	'<select id="sel-ciud" class="custom-select inps-forms mb-3" disabled>'+
+								    	'<option selected disabled value="none" id="opc-ciud-deft">Ciudad</option>'+
+								  	'</select>'+
+									
+								'</div>'+
 								
 							'</div>'+
-							
+							'<div class="col-md-6">'+
+					  '<div class="form-group">'+
+						  		'<label>Dirección<span style="color:red;">*</span></label>'+
+				  				'<input type="text" class="form-control inps-forms" placeholder="Dirección de residencia" id="dir">'+
+								'</div>'+
+
+								
+								'<div class="form-group">'+
+						  		'<label>Email<span style="color:red;">*</span></label>'+
+				  				'<input type="email" class="form-control inps-forms" placeholder="Correo electrónico" id="ema">'+
+								'</div>'+
+								'<div class="form-group">'+
+						  		'<label>Contraseña<i class="fa fa-question" style="cursor:help;margin-left:20px;" onmouseover="$(\'#help1\').css(\'display\',\'block\')" onmouseout="$(\'#help1\').css(\'display\',\'none\')"></i><span class="tooltiptext" id="help1">Digite la contraseña, solo si desea modificarla</span></label>'+
+				  				'<input type="password" class="form-control inps-forms" placeholder="Contraseña" >'+
+								'</div>'+
+								'<div class="form-group">'+
+								'<label>Rol  <span style="color:red;">*</span></label>'+
+							 	'<select id="sel-rol" class="custom-select inps-forms mb-3" disabled>'+
+						    	'<option selected disabled value="none">Seleccione...</option>'+
+						    '<option value="2">DIGITADOR</option>'+
+						    	'<option value="3">EVALUADOR ELEGIBILIDAD</option>'+
+						    	'<option value="4">EVALUADOR VIABILIDAD</option>'+
+						    	'<option value="5" disabled>GESTOR TÉCNICO</option>'+
+						    		'<option value="6">ABOGADO - ASESOR JURÍDICO</option>'+
+						     	'<option value="7">COLOMBIA PRODUCTIVA</option>'+
+						     	'<option value="8">SERVICIO NACIONAL DE APRENDIZAJE - SENA</option>'+
+						     	'<option value="9" disabled>TERCER EVALUADOR</option>'+
+						  	'</select></div>'+
+						  	'<div class="form-group">'+
+						  	'<label>Estado De Usuario</label>'+
+							 	'<select id="sel-esta" class="custom-select inps-forms mb-3">'+
+						    	'<option value="1">ACTIVO</option>'+
+						    	'<option value="0">INACTIVO</option>'+
+						  	'</select></div>'+
+						  	
+							'</div><div class="col-md-12">'+
+							'<div class="form-group">'+
+						  		'<label>Perfil profesional<span style="color:red;">*</span></label>'+
+				  				'<textarea type="text" class="form-control inps-forms" placeholder="Perfil profesional" id="pro"></textarea>'+
+								'</div></div>'+
 						'</div>'+
-						'<div class="col-md-6">'+
-				  '<div class="form-group">'+
-					  		'<label>Dirección<span style="color:red;">*</span></label>'+
-			  				'<input type="text" class="form-control inps-forms" placeholder="Dirección de residencia" id="dir">'+
-							'</div>'+
+						'<div class="text-center">'+
+							'<button class="btn-functions" id="btn-add-pers" onclick="upd_userr()"><i class="fas fa-check"></i>&nbsp;Editar</button>'+
+						'</div>'
 
-							
-							'<div class="form-group">'+
-					  		'<label>Email<span style="color:red;">*</span></label>'+
-			  				'<input type="email" class="form-control inps-forms" placeholder="Correo electrónico" id="ema">'+
-							'</div>'+
-							'<div class="form-group">'+
-					  		'<label>Contraseña<i class="fa fa-question" style="cursor:help;margin-left:20px;" onmouseover="$(\'#help1\').css(\'display\',\'block\')" onmouseout="$(\'#help1\').css(\'display\',\'none\')"></i><span class="tooltiptext" id="help1">Digite la contraseña, solo si desea modificarla</span></label>'+
-			  				'<input type="password" class="form-control inps-forms" placeholder="Contraseña" >'+
-							'</div>'+
-							'<div class="form-group">'+
-							'<label>Rol  <span style="color:red;">*</span></label>'+
-						 	'<select id="sel-rol" class="custom-select inps-forms mb-3" disabled>'+
-					    	'<option selected disabled value="none">Seleccione...</option>'+
-					    '<option value="2">DIGITADOR</option>'+
-					    	'<option value="3">EVALUADOR ELEGIBILIDAD</option>'+
-					    	'<option value="4">EVALUADOR VIABILIDAD</option>'+
-					    	'<option value="5" disabled>GESTOR TÉCNICO</option>'+
-					    		'<option value="6">ABOGADO - ASESOR JURÍDICO</option>'+
-					     	'<option value="7">COLOMBIA PRODUCTIVA</option>'+
-					     	'<option value="8">SERVICIO NACIONAL DE APRENDIZAJE - SENA</option>'+
-					     	'<option value="9" disabled>TERCER EVALUADOR</option>'+
-					  	'</select></div>'+
-					  	'<div class="form-group">'+
-					  	'<label>Estado De Usuario</label>'+
-						 	'<select id="sel-esta" class="custom-select inps-forms mb-3">'+
-					    	'<option value="1">ACTIVO</option>'+
-					    	'<option value="0">INACTIVO</option>'+
-					  	'</select></div>'+
-					  	
-						'</div><div class="col-md-12">'+
-						'<div class="form-group">'+
-					  		'<label>Perfil profesional<span style="color:red;">*</span></label>'+
-			  				'<textarea type="text" class="form-control inps-forms" placeholder="Perfil profesional" id="pro"></textarea>'+
-							'</div></div>'+
-					'</div>'+
-					'<div class="text-center">'+
-						'<button class="btn-functions" id="btn-add-pers" onclick="upd_userr()"><i class="fas fa-check"></i>&nbsp;Editar</button>'+
-					'</div>'
+	$("#cont-pers-fun").html(html_fun);	
 
-$("#cont-pers-fun").html(html_fun);	
-
-Departamentos33(dep,ciu,nom,ti,ni,tel,dir,pro,ema,rol,st);
-
-
+	Departamentos33(dep,ciu,nom,ti,ni,tel,dir,pro,ema,rol,st);
 }
-
-
-
 function Departamentos33(dep,ciu,nom,ti,ni,tel,dir,pro,ema,rol,st){
-   var depar=""; 
-  var sendform = new FormData();
+	var depar=""; 
+	var sendform = new FormData();
 
-  $.ajax({
+	$.ajax({
 		type:'POST',
 		url:'templates/modules/ciudad.php?ld=1',
 		data:sendform,
@@ -1160,47 +1136,46 @@ function Departamentos33(dep,ciu,nom,ti,ni,tel,dir,pro,ema,rol,st){
 	  success:function(e){
 	    // Cargar el listado de convocatorias en el elemento div
 	   $("#sel-depa").html(e);
-     $("#sel-depa").val(dep)
-     Ciudades33(ciu,nom,ti,ni,tel,dir,pro,ema,rol,st)
+	   $("#sel-depa").val(dep)
+	   Ciudades33(ciu,nom,ti,ni,tel,dir,pro,ema,rol,st)
 	  }
 	});
-
 }
 function Ciudades33(ciu,nom,ti,ni,tel,dir,pro,ema,rol,st){
-   var depar=""; 
-  var sendform = new FormData();
+	var depar=""; 
+	var sendform = new FormData();
 
-  $.ajax({
+	$.ajax({
 		type:'POST',
 		url:'templates/modules/ciudad.php?lc=1',
 		data:sendform,
 		cache:false,
 		processData:false,
-	  contentType:false,
+		contentType:false,
 		beforeSend:function(){
 		// debug.log("Momento por favor");
 		},
-	  success:function(e){
-	    // Cargar el listado de convocatorias en el elemento div
-	  $("#sel-ciud").html("<option disabled value='none' id='opc-ciud-deft'>Ciudad</option>"+e);
-	  $("#sel-ciud").val(ciu)
-	  $("#nom").val(nom)
-$("#ti").val(ti)
-$("#ni").val(ni)
-$("#tel").val(tel)
-$("#dir").val(dir)
-$("#pro").val(pro)
-$("#ema").val(ema)
-$("#sel-rol").val(rol)
-$("#sel-esta").val(st)
-	  }
+		success:function(e){
+		  // Cargar el listado de convocatorias en el elemento div
+		  $("#sel-ciud").html("<option disabled value='none' id='opc-ciud-deft'>Ciudad</option>"+e);
+		  $("#sel-ciud").val(ciu)
+		  $("#nom").val(nom)
+			$("#ti").val(ti)
+			$("#ni").val(ni)
+			$("#tel").val(tel)
+			$("#dir").val(dir)
+			$("#pro").val(pro)
+			$("#ema").val(ema)
+			$("#sel-rol").val(rol)
+			$("#sel-esta").val(st)
+		}
 	});
 }
 function Departamentos(dp){
-   var depar=""; 
-  var sendform = new FormData();
+	var depar=""; 
+	var sendform = new FormData();
 
-  $.ajax({
+	$.ajax({
 		type:'POST',
 		url:'templates/modules/ciudad.php?ld=1',
 		data:sendform,
@@ -1213,30 +1188,29 @@ function Departamentos(dp){
 	  success:function(e){
 	    // Cargar el listado de convocatorias en el elemento div
 	   $("#sel-depa").html(e);
-     $("#sel-depa").val(dp)
+	   $("#sel-depa").val(dp)
 	  }
 	});
-
 }
 function Ciudades(cd){
-   var depar=""; 
-  var sendform = new FormData();
+	var depar=""; 
+	var sendform = new FormData();
 
-  $.ajax({
+	$.ajax({
 		type:'POST',
 		url:'templates/modules/ciudad.php?lc=1',
 		data:sendform,
 		cache:false,
 		processData:false,
-	  contentType:false,
+		contentType:false,
 		beforeSend:function(){
 		// debug.log("Momento por favor");
 		},
-	  success:function(e){
-	    // Cargar el listado de convocatorias en el elemento div
-	  $("#sel-ciud").html("<option disabled value='none' id='opc-ciud-deft'>Ciudad</option>"+e);
-	  $("#sel-ciud").val(cd)
-	  }
+		success:function(e){
+		  // Cargar el listado de convocatorias en el elemento div
+		$("#sel-ciud").html("<option disabled value='none' id='opc-ciud-deft'>Ciudad</option>"+e);
+		$("#sel-ciud").val(cd)
+		}
 	});
 }
 // Fin-------------------------------------------------------------------

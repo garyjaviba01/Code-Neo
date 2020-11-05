@@ -8,11 +8,18 @@ class transacciones
     function __construct()
     {
         //incluir el archivo conexion
-        $conex = mysqli_connect("localhost", "cpcorien_us_neo", "neo2020_", "cpcorien_neo_bd");
-        // *conexion local*	$conex= mysqli_connect("localhost","root","","convecfc_neo");
+        // $conex = mysqli_connect("localhost", "cpcorien_us_neo", "neo2020_", "cpcorien_neo_bd");
+        
+        // COMANDO CRON JOB BACKUP BD ->
+        // /usr/bin/mysqldump -u usuario -p'pssword' baseDatos > /home/cpanel-usuario/rutaCarpetas/db_nombre_`date +\%Y\%m\%d\%H\%M`.sql
+        // /usr/bin/mysqldump -u cpcorien_us_neo -p'neo2020_' cpcorien_neo_bd > /home/cpcoriente/db_backups/db_neo/db_`date +\%Y\%m\%d\%H\%M`.sql
+        // usr/bin/mysqldump -u cpcorien_us_neo -p'neo2020_' cpcorien_neo_bd > /home/cpcoriente/db_backups/db_neo/db_neo_`date +\%Y\%m\%d\%H\%M`.sql
+        $conex = mysqli_connect("localhost","root","","cpcorien_neo_bd");
         mysqli_query($conex, "set names 'utf8'");
+        
         //asignar a la variable $conexion el retorno del metodo conectar()
         $this->conexion = $conex;
+    
     }
     //combo convocatorias
     public function ComboConvo()

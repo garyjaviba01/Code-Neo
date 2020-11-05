@@ -1,0 +1,36 @@
+/*================================================*/
+/*ESTILOS PANEL DE ESTADISTICAS*/
+/*================================================*/
+/*BARRA PROGRESO INCIAL*/
+#progress-pan {
+  width: 100%!important;
+  margin-bottom: 20px;
+  height: 8px;
+  position: relative;
+  text-align: center;
+  font-weight: 600;
+}
+
+.card-panel{
+	background-color: #fff!important;
+}
+
+.btn-group.special {
+  display: flex;
+}
+
+.special .btn {
+  flex: 1
+}
+/*CIRCULO PROGRESIVO GRANDE*/
+.progg-big{
+	margin: auto;
+  width: 150px;
+  height: 150px;
+}
+/*CIRCULO PROGRESIVO PEQUEÑO*/
+.progg-small{
+	margin: 0 auto;
+  width: 120px;
+  height: 120px;	
+}

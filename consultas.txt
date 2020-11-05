@@ -1,0 +1,12 @@
+evaluacion finalizada juridicos / 
+=========================================================================
+select if(count(propuestas.id)=5,"FINALIZADO","SIN FINALIZAR"),propuestas.id,propuestas.num_rad,usuarios.nombre,if(usuarios.rol=3,"EVALUADOR ELEGIBILIDAD","ASESOR JURÍDICO/ABOGADO"),usuariosxpropuesta_ele.fecha_asig,calificacion_elegibilidad.fecha FROM `calificacion_elegibilidad`,propuestas,criterios_ele,usuarios,usuariosxpropuesta_ele  WHERE calificacion_elegibilidad.id_propuesta=propuestas.id AND  calificacion_elegibilidad.usuario=usuarios.cod AND calificacion_elegibilidad.id_criterio=criterios_ele.id and usuariosxpropuesta_ele.id_usuario=usuarios.cod and usuariosxpropuesta_ele.id_propuesta=propuestas.id and id_criterio<93 group by(propuestas.id) order by calificacion_elegibilidad.id_propuesta
+
+esa la dejo solo por 5
+
+
+evaluacion finalizada tecnicos
+=========================================================================
+select if(ROUND(count(propuestas.id)/2),"FINALIZADO","SIN FINALIZAR"),propuestas.id,propuestas.num_rad,usuarios.nombre,if(usuarios.rol=3,"EVALUADOR ELEGIBILIDAD","ASESOR JURÍDICO/ABOGADO"),usuariosxpropuesta_ele.fecha_asig,calificacion_elegibilidad.fecha FROM `calificacion_elegibilidad`,propuestas,criterios_ele,usuarios,usuariosxpropuesta_ele WHERE calificacion_elegibilidad.id_propuesta=propuestas.id AND calificacion_elegibilidad.usuario=usuarios.cod AND calificacion_elegibilidad.id_criterio=criterios_ele.id and usuariosxpropuesta_ele.id_usuario=usuarios.cod and usuariosxpropuesta_ele.id_propuesta=propuestas.id and id_criterio>92 group by(propuestas.id) order by calificacion_elegibilidad.id_propuesta
+
+5 y 11

@@ -6,7 +6,8 @@ if(isset($_COOKIE['user_code']) && isset($_COOKIE['user_rol']) && ($_COOKIE['use
 		$total=0;
 		$x=0;
      
-		$conect= mysqli_connect("localhost","cpcorien_us_neo","neo2020_","cpcorien_neo_bd");
+		// $conect= mysqli_connect("localhost","cpcorien_us_neo","neo2020_","cpcorien_neo_bd");
+    $conect= mysqli_connect("localhost","root","","cpcorien_neo_bd");
         $query=mysqli_query($conect,"SELECT count(*),dia_ele FROM `propuestas` group by dia_ele");
         $estado="";
         while($datos=mysqli_fetch_array($query))

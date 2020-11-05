@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------------------------
 /*鈻篋escripcion: Controla los eventos del dash de usuario evaluador*/
 /*Funcion-1: Controla la botonera lateral del Usuario EVALUADOR*/
-function tabs_eval_ele(tab, btn,data){
+function tabs_eval_ele(tab, btn, data){
 	// Objeto Majer
 	maker = new Maker("#tabs-content", "", 5);
 	// Limpiar contenedor de tabs
@@ -31,15 +31,7 @@ function tabs_eval_ele(tab, btn,data){
 			'<div class="nd-conv">'+
 				'<h5 class="tit-nodo"><i class="fas fa-flag"></i>&nbsp;Convocatorias</h5>'+
 				'<hr/>'+
-				'<div class="nav-convo">'+
-    					'<button class="btn-functions" onclick="ListadoConvocatorias(1)"  id="btn1"> Listado</button>'+
-					'<button class="btn-functions" onclick="ListadoConvocatorias(2)"  id="btn2">Vigentes</button>'+
-					'<button class="btn-functions" onclick="ListadoConvocatorias(3)"  id="btn3"> Finalizadas</button>'+
-				'</div>'+
 				'<div class="cont-convo-fun" id="cont-convo-fun">'+
-					'<p><span class="badge badge-info">1</span><strong> Listado : </strong>Ver la información de todas las convocatorias registradas en la base de datos</p>'+
-					'<p><span class="badge badge-info">2</span><strong> Vigentes : </strong> Convocatorias cuya fecha de finalización aún no ha expirado</p>'+
-					'<p><span class="badge badge-info">3</span><strong> Finalizadas : </strong> Convocatorias cuya fecha de finalización ya expiró </p>'+
 				'</div>'+
 			'</div>';
 			// Pasar Contenido
@@ -47,6 +39,8 @@ function tabs_eval_ele(tab, btn,data){
 			maker.s_opt = 1;
 			// Crear contenido
 			maker.maker_html();
+			// ACTIVAR TAB BOTONES 
+			active_function("#viab-tab-convo", "#btn1");
 		break;
 		case 'ndeva':
 			// Contenido
@@ -249,8 +243,8 @@ function ListadoConvocatorias(listado){
 	    $("#cont-convo-fun").html(e);
 		}
 	});
-	$(".btn-functions").removeClass("btn-functions-active");
-	$("#btn"+listado).addClass("btn-functions-active");
+	$(".btn-side-view").removeClass("btn-side-active");
+	$("#btn"+listado).addClass("btn-side-active");
 }
 function ListadoConvocatoriasvia(listado){
     
@@ -341,7 +335,6 @@ function Propuestas(id){
 	    $("#nav-convo").html(e);
 		}
 	});
-
 }
 function Propuestas2(id){
     
@@ -362,10 +355,8 @@ function Propuestas2(id){
 	    $("#nav-convo").html(e);
 		}
 	});
-
 }
-function PropuestasEva(id){
-    
+function PropuestasEva(id){  
   //enviar solicitud de archivo propuestas
   $("#nav-convo").html("<div class='spinner-border text-dark'></div>");
   $.ajax({
@@ -383,10 +374,8 @@ function PropuestasEva(id){
 	    $("#nav-convo").html(e);
 		}
 	});
-
 }
-function PropuestasEva2(id){
-    
+function PropuestasEva2(id){ 
   //enviar solicitud de archivo propuestas
   $("#nav-convo").html("<div class='spinner-border text-dark'></div>");
   $.ajax({
@@ -404,7 +393,6 @@ function PropuestasEva2(id){
 	    $("#nav-convo").html(e);
 		}
 	});
-
 }
 function DatainitialPro(id){
   
@@ -460,7 +448,7 @@ function DatainitialPro2(id){
         
     }
 }
- function listprop(){
+function listprop(){
          
   //enviar solicitud de detalle de convocatorias
    $("#cont-convo-fun").html("<div class='spinner-border text-dark'></div>");

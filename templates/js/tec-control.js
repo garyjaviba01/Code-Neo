@@ -33,7 +33,7 @@ function tabs_tec(tab, btn){
 			// CONTENIDO
 			html_cont = ''+
 			'<div class="nd-conv">'+
-				'<div class="nav-functions">'+
+				'<div class="nav-functions btn-group">'+
 					'<h5 class="tit-nodo"><i class="fa fa-file-contract"></i>&nbsp;Derechos de Petición</h5>'+
 					'<button class="btn-functions" id="def-derp" onclick="tabs_der(1, this)"><i class="fas fa-plus"></i>&nbsp; &nbsp;Crear</button>'+
 					'<button class="btn-functions" id="derp-list-derp" onclick="tabs_der(2, this)"><i class="fas fa-cogs"></i></i>&nbsp; &nbsp;Listado y Detalles</button>'+
@@ -48,19 +48,14 @@ function tabs_tec(tab, btn){
 			// ACTIVAR EL TAB
 			document.getElementById('def-derp').click();
 		break;
+		// ----------------------------------------------
+		// MODULO CONVOCATORIAS
+		// ----------------------------------------------
 		case 'ndc':
 			// Contenido
 			html_tab = ''+
 			'<div class="nd-conv">'+
-				'<div class="nav-functions">'+
-					'<h5 class="tit-nodo"><i class="fas fa-flag"></i>&nbsp;Convocatorias</h5>'+
-					'<button class="btn-functions" onclick="convo_fun(1, this)" id="deft-conv"><i class="fas fa-plus"></i>&nbsp; &nbsp;Crear</button>'+
-					//'<button class="btn-functions" onclick="convo_fun(2, this)"><i class="fas fa-check-square"></i>&nbsp; &nbsp;Criterios</button>'+
-					'<button class="btn-functions" id="btnlist" onclick="convo_fun(3, this)"><i class="fas fa-list-ol"></i>&nbsp; &nbsp; Listado</button>'+
-					'<button class="btn-functions btn-functions-active" onclick="cri_ele($(\'#cri_ele\'))" id="cri_ele"><i class="fas fa-check-square"></i>&nbsp;Requisitos elegibilidad</button>'+
-					'<button class="btn-functions" id="cri_via" onclick="cri_via($(\'#cri_via\'))"><i class="fa fa-thumbs-up"></i>&nbsp;Requisitos viabilidad</button>'+
-					'<button class="btn-functions" onclick="causales($(\'#causa_rec\'))" id="causa_rec"><i class="fas fa-thumbs-down"></i>&nbsp; &nbsp;Causales rechazo</button>'+
-				'</div>'+
+				'<h5 class="tit-nodo"><i class="fas fa-flag"></i>&nbsp;Convocatorias</h5>'+
 				'<div class="cont-convo-fun text-center" id="cont-convo-fun">'+
 				'</div>'+
 			'</div>';
@@ -69,22 +64,14 @@ function tabs_tec(tab, btn){
 			maker.s_opt = 1;
 			// Crear contenido
 			maker.maker_html();
-			// Activar tab
-			document.getElementById("deft-conv").click();
+
+			// ACTIVAR TAB BOTONES 
+			active_function("#tec-tab-convo", "#deft-conv");
 		break;
 		case 'ndc2':
 			// Contenido
 			html_tab = ''+
 			'<div class="nd-conv">'+
-				'<div class="nav-functions">'+
-					'<h5 class="tit-nodo"><i class="fas fa-flag"></i>&nbsp;Convocatorias</h5>'+
-					
-					//'<button class="btn-functions" onclick="convo_fun(2, this)"><i class="fas fa-check-square"></i>&nbsp; &nbsp;Criterios</button>'+
-					'<button class="btn-functions" id="btn1" onclick="ListadoConvocatorias(1)"><i class="fas fa-list-ol"></i>&nbsp; &nbsp; Listado</button>'+
-					'<button class="btn-functions btn-functions-active" onclick="LCrecp($(\'#cri_ele\'))" id="cri_ele"><i class="fas fa-check-square"></i>&nbsp;Requisitos elegibilidad</button>'+
-					'<button class="btn-functions" id="cri_via" onclick="LCrvcp($(\'#cri_via\'))"><i class="fa fa-thumbs-up"></i>&nbsp; &nbsp;Requisitos viabilidad</button>'+
-					'<button class="btn-functions" onclick="LCaucp($(\'#causa_rec\'))" id="causa_rec"><i class="fas fa-thumbs-down"></i>&nbsp; &nbsp;Causales rechazo</button>'+
-				'</div>'+
 				'<div class="cont-convo-fun text-center" id="cont-convo-fun">'+
 				'</div>'+
 			'</div>';
@@ -93,19 +80,16 @@ function tabs_tec(tab, btn){
 			maker.s_opt = 1;
 			// Crear contenido
 			maker.maker_html();
-			// Activar tab
-			document.getElementById("btn1").click();
+			// ACTIVAR TAB BOTONES 
+			active_function("#cp-tab-convo", "#btn1");
 		break;
+		// ----------------------------------------------
+		// MODULO PERSONAL
+		// ----------------------------------------------
 		case 'ndpe':
 			// Contenido
 			html_tab = ''+
 			'<div class="nd-conv">'+
-				'<div class="nav-functions">'+
-					'<h5 class="tit-nodo"><i class="fas fa-users"></i>&nbsp;Personal</h5>'+
-					'<button class="btn-functions" onclick="personal_fun(1, this)" id="deft-person"><i class="fas fa-plus"></i>&nbsp; &nbsp;Crear</button>'+
-					'<button class="btn-functions" onclick="personal_fun(2, this)" id="lstper"><i class="fas fa-list-ol"></i>&nbsp; &nbsp;Listado</button>'+
-					''+
-				'</div>'+
 				'<div class="cont-convo-fun text-center"	 id="cont-pers-fun"></div>'+
 			'</div>';
 			// Pasar Contenido
@@ -113,15 +97,15 @@ function tabs_tec(tab, btn){
 			maker.s_opt = 1;
 			// Crear contenido
 			maker.maker_html();
-			// Activar tab inicial
-			document.getElementById("deft-person").click();
+			// ACTIVAR TAB BOTONES 
+			active_function("#tec-tab-per", "#deft-person");
 		break;
-case 'ndpe2':
+		case 'ndpe2':
 			// Contenido
 			html_tab = ''+
 			'<div class="nd-conv">'+
-				'<div class="nav-functions">'+
-					'<h5 class="tit-nodo"><i class="fas fa-users"></i>&nbsp;Personal</h5>'+
+				'<h5 class="tit-nodo"><i class="fas fa-users"></i>&nbsp;Personal</h5>'+
+				'<div class="nav-functions btn-group">'+
 					'<button class="btn-functions" onclick="asignarpro(this)" id="asiper"><i class="fas fa-check-circle"></i>&nbsp; &nbsp;Asignar</button>'+
 				'</div>'+
 				'<div class="cont-convo-fun text-center"	 id="cont-pers-fun"></div>'+
@@ -134,10 +118,7 @@ case 'ndpe2':
 			// Activar tab inicial
 			//document.getElementById("deft-person").click();
 			asignarpro($("#asiper"))
-
 		break;
-
-
 		case 'ndpr':
 			// Contenido
 			html_tab = ''+
@@ -286,7 +267,6 @@ function convo_fun(fun, btn){
 				'<div id="config-crits" class="mt-4">'+
 					'<h5 id="config-title">CONFIGURACIÓN DE CRITERIOS</h5>'+	
 				'</div>'+
-
 			'</div>';
 			// Pasar Contenido
 			maker.s_html = html_fun;
@@ -328,7 +308,7 @@ function convo_fun(fun, btn){
 			list_announcements();
 		break;
 
-case 4: // LISTADO GENERAL DE CONVOCATORIAS
+		case 4: // LISTADO GENERAL DE CONVOCATORIAS
 			// Contenido
 			var html_fun = ''+
 			'<div id="cont-list-convos">'+
@@ -366,10 +346,10 @@ case 4: // LISTADO GENERAL DE CONVOCATORIAS
 		break;
 	}	
 
-	// Remover Clase de botones no activos
-	$(".btn-functions").removeClass("btn-functions-active");
-	// Agregar clase al boton
-	$(btn).addClass("btn-functions-active");
+	// Identificar botones
+	$(".btn-side-view").removeClass("btn-side-active");
+	// Agregar clase a boton por defecto
+	$(btn).addClass("btn-side-active");
 }
 /*Funcion-3: Controla la botonera del Nodo Personal*/
 function personal_fun(fun, btn){
@@ -385,7 +365,7 @@ function personal_fun(fun, btn){
 			var html_pers = ''+
 			''+
 					'<div class="row"><br>'+
-	'	<br><div class="col-md-12" style="color:red;text-align:left;">Campos obligatorios *</div><br><br>'+
+						'<br><div class="col-md-12" style="color:red;text-align:left;">Campos obligatorios *</div><br><br>'+
 						'<div class="col-md-6">'+
 							'<div class="form-group">'+
 					  		'<label>Nombres/Apellidos<span style="color:red;">*</span></label>'+
@@ -518,9 +498,9 @@ function personal_fun(fun, btn){
 		break;
 	}
 	// Remover Clase de botones no activos
-	$(".btn-functions").removeClass("btn-functions-active");
+	$(".btn-side-view").removeClass("btn-side-active");
 	// Agregar clase al boton
-	$(btn).addClass("btn-functions-active");
+	$(btn).addClass("btn-side-active");
 }
 /*Funcion-4: Cierre de Session*/
 function CloseSesion(){
@@ -586,11 +566,10 @@ TableFilter = function(id, value){
             }
 
         }
+}
 
-    }
 
-
-    function ListadoConvocatorias(listado){
+function ListadoConvocatorias(listado){
     
   //enviar solicitud de listado de convocatorias
    $("#cont-convo-fun").html("<div class='spinner-border text-dark'></div>");
@@ -611,8 +590,8 @@ TableFilter = function(id, value){
 	    $("#cont-convo-fun").html(e);
 		}
 	});
-	$(".btn-functions").removeClass("btn-functions-active");
-	$("#btn"+listado).addClass("btn-functions-active");
+	$(".btn-side-view").removeClass("btn-side-active");
+	$("#btn"+listado).addClass("btn-side-active");
 }
 
 function DetailConvo(id){

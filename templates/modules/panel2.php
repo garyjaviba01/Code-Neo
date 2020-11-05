@@ -1,8 +1,8 @@
 <?php 
 if(isset($_COOKIE['user_code']) && isset($_COOKIE['user_rol']) && ( $_COOKIE['user_rol']==7 || $_COOKIE['user_rol']==8)){
 include("../../phpMVC/Model/class.php");
-$obj=new transacciones;
-$totalPro=$obj->TotalPropuestas(); 
+$obj = new transacciones();
+$totalPro = $obj->TotalPropuestas(); 
 ?>
 
 <div class="row" id="divpro" style="text-align: left;">
@@ -64,7 +64,7 @@ echo $totalPro; ?></div>
    <div class="col-md-2 panel_divs" ><h5 style="color: #196b95;">Análisis regional de empresas
 </h5>
 <i class='fa fa-chart-pie icon_sesion' title='Gráfica' onclick="ChartEmpresas2()"></i><i class="fa fa-file-excel icon_sesion" title="Descargar excel" onclick="window.open('templates/modules/ExcelEmpresas.php')" ></i>
-<br><br><b>Empresas registradas : </b><?php $obj->TotalEmp_Reg()();?></div>
+<br><br><b>Empresas registradas : </b><?php $obj->TotalEmp_Reg();?></div>
     <div class="col-md-2" ></div>
   
 
